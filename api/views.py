@@ -6,6 +6,9 @@ from rest_framework.generics import ListAPIView,CreateAPIView,UpdateAPIView,Dest
 class EmployeeListCreateView(ListAPIView,CreateAPIView):
     serializer_class=EmployeeSerializer
     queryset=Employee.objects.all()
+
+
+    
 class EmployeeRetrieveUpdateDestroyView(RetrieveAPIView,UpdateAPIView,DestroyAPIView):
     serializer_class=EmployeeSerializer
     queryset=Employee.objects.all()
